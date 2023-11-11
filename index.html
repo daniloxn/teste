@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type="checkbox"]:checked ~ .box {
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    background-color: #001f3f;
+                }
+                50% {
+                    background-color: #ff4136;
+                }
+                100% {
+                    background-color: #001f3f;
+                }
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: #001f3f;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" id="checkbox" />
+        <div class="box"></div>
+    </body>
+</html>

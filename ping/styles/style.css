@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+    /* Colors */
+    --primary-blue: hsl(223, 87%, 63%);
+    --secondary-pale-blue: hsl(223, 100%, 88%);
+    --secondary-light-red: hsl(354, 100%, 66%);
+    --neutral-gray: hsl(0, 0%, 59%);
+    --neutral-very-dark-blue: hsl(209, 33%, 12%);
+    --neutral-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --family-libre-franklin: "Libre Franklin", sans-serif;
+    --fw-300: 300;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--family-libre-franklin);
+}
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+    max-width: 30rem;
+    text-align: center;
+}
+
+.text-dark-blue {
+    color: var(--neutral-very-dark-blue);
+}
+
+.text-gray {
+    color: var(--neutral-gray);
+}
+
+.text-white {
+    color: var(--neutral-white);
+}
+
+.bg-blue {
+    background-color: var(--primary-blue);
+}
+
+header {
+    margin: 4rem 0 2.3rem;
+}
+
+header img {
+    width: 25%;
+}
+
+main img {
+    width: 100%;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-weight: var(--fw-300);
+    margin-bottom: 1.3rem;
+}
+
+.title span {
+    font-weight: var(--fw-700);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+}
+
+form {
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.form-group {
+    border: 1px solid var(--secondary-pale-blue);
+    border-radius: 50px;
+    position: relative;
+    cursor: text;
+}
+
+.form-group input {
+    padding: 1rem 0 1rem 2.2rem;
+    background-color: transparent;
+    width: 100%;
+}
+
+.form-group input::placeholder {
+    font-size: 0.9rem;
+    font-family: var(--family-libre-franklin);
+    font-weight: var(--fw-300);
+    color: var(--neutral-very-dark-blue);
+}
+
+.form-group input[type] {
+    font-size: 0.9rem;
+    font-family: var(--family-libre-franklin);
+    font-weight: var(--fw-300);
+    color: var(--neutral-very-dark-blue);
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 5px 20px var(--secondary-pale-blue);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-family: var(--family-libre-franklin);
+    font-weight: var(--fw-600);
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.btn:hover,
+btn:focus {
+    filter: brightness(1.2);
+}
+
+.error-text {
+    position: absolute;
+    top: 115%;
+    right: 0;
+    left: 0;
+    font-size: 0.85rem;
+    font-weight: var(--fw-300);
+    color: var(--secondary-light-red);
+    font-style: italic;
+    display: none;
+    transition: 0.2s ease-out;
+}
+
+.form-group.error {
+    margin-bottom: 0rem;
+}
+
+.form-group.error ~ .btn {
+    transform: translateY(1.7rem);
+}
+
+.form-group.error {
+    border: 2px solid var(--secondary-light-red);
+    border-radius: 50px;
+}
+
+footer {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    padding: 0.5rem;
+    display: flex;
+    border: 1px solid var(--secondary-pale-blue);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    font-size: 18px;
+    color: var(--primary-blue);
+}
+
+.social-icon:hover {
+    background-color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 50px;
+    color: var(--neutral-white);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    font-weight: var(--fw-300);
+    margin-bottom: 1rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--neutral-gray);
+}
+
+.attribution a {
+    color: var(--neutral-very-dark-blue);
+    text-decoration: underline;
+}
+
+.attribution a:hover {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        width: 90%;
+        max-width: 40rem;
+    }
+
+    header img {
+        width: 15%;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .btn {
+        margin-top: 0;
+        width: 40%;
+    }
+
+    .error-text {
+        top: 115%;
+        right: auto;
+        margin-left: 2.2rem;
+        font-size: 0.7rem;
+    }
+
+    .form-group.error ~ .btn {
+        transform: translateY(0);
+    }
+}

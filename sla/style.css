@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clip-text-video {
+    position: relative;
+}
+
+img {
+    scale: 0.5;
+}
+
+.clip-text-video__text {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    background: #000;
+    mix-blend-mode: multiply;
+}
+
+.clip-text-video__text p {
+    font-size: 9vw;
+    line-height: 1;
+    font-weight: 900;
+    font-family: helvetica;
+}
